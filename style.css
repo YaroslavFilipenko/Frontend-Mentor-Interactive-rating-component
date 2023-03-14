@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+body {
+    font-family: 'Overpass', sans-serif;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(228, 20%, 10%);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 410px;
+    height: 415px;
+    background: linear-gradient(hsl(212,30%,16%) 0%, hsl(215, 42%, 12%) 100%);
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: hsl(218deg 18% 24%);
+    border-radius: 50%;
+    color: hsl(217deg 20% 70%);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.info {
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    color: hsl(217, 12%, 63%);
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating__label {
+    position: relative;
+    cursor: pointer;
+}
+
+input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.rating__label:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    transition: .4s ease-in-out;
+}
+
+.rating__label:has(.rating__circle.active) {
+    background-color: hsl(217, 12%, 63%);
+    color: hsl(0, 0%, 100%);
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    background: hsl(25, 97%, 53%);
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+    transition: .4s ease;
+}
+
+.state-main {
+    display: none;
+}
+
+.state-wrapper {
+    display: none;
+    align-items: center;
+    text-align: center;
+}
+
+.state-title {
+    font-size: 1.75rem;
+}
+
+.state-selected-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 32px;
+    color: hsl(25, 97%, 53%);
+    background: hsl(215, 30%, 22%);
+    border-radius: 25px;
+}
+
+label:has('.rating__circle.active') {
+    background: red;
+}
+
+@media (max-width: 575.98px) {
+    .wrapper {
+        width: 330px;
+        height: 360px;
+        padding: 30px;
+    }
+
+    .circle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+
+    .submit {
+        width: 280px;
+    }
+
+    .state-selected-info {
+        width: 180px;
+    }
+}
