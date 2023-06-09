@@ -14,3 +14,11 @@ $('.submit').click(function() {
         $('.state-selected-info').text('You selected 0 out of 5');
    }
 });
+
+$('.reset').click(function() {
+    $('.main-wrapper').css('display', 'flex');
+    $('.state-wrapper').css('display', 'none');
+    if($('.rating__circle').hasClass('active')) {
+        $('.rating__circle').removeClass('active');
+    };
+});

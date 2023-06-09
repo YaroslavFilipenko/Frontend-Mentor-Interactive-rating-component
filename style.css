@@ -79,6 +79,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
     padding: 15px 0;
     background: hsl(25, 97%, 53%);
     border-radius: 25px;
